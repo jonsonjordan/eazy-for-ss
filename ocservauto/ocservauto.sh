@@ -403,7 +403,7 @@ function tar_lz4_install(){
 function tar_freeradius_client_install(){
     print_info "Installing freeradius-client-1.1.7"
     DEBIAN_FRONTEND=noninteractive apt-get -y -qq remove --purge freeradius-client*
-    wget -c ftp://ftp.freeradius.org/pub/freeradius/freeradius-client-1.1.7.tar.gz
+    wget -c https://github.com/FreeRADIUS/freeradius-client/archive/release_1_1_7.tar.gz
     tar -zxf freeradius-client-1.1.7.tar.gz
     cd freeradius-client-1.1.7
     ./configure --prefix=/usr --sysconfdir=/etc
